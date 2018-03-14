@@ -25,8 +25,7 @@ class V1::StudentsController < ApplicationController
       website_url: params[:website_url],
       resume_url: params[:resume_url],
       github_url: params[:github_url],
-      photo: params[:photo],
-      education: params[:education]
+      photo: params[:photo]
       )
 
     render json: {message: "You have successfully updated your resume!"}
