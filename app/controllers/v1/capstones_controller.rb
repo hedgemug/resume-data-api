@@ -5,7 +5,7 @@ class V1::CapstonesController < ApplicationController
 	end
 
 	def show
-		capstone = Capstone.find(params[:id])
+		capstone = Capstone.find_by(id: params[:id])
 		render json: capstone.as_json
 	end
 
@@ -25,11 +25,20 @@ class V1::CapstonesController < ApplicationController
 	end
 
 	def update
+		capstone = Capstone.find_by(id: params[:id])
+		capstone.update(
+			title: params[:title],
+			description: params[:description],
+			url: params[:url],
+			photo: params[:photo],
+			studentID: params[:student_id]
+			)
 
+		render json: {message: "You have updated your capstone!"}
 	end
 
 	def destroy
-		capstone = Capstone.find(params[:id])
+		capstone = Capstone.find_by(id: params[:id])
 		capstone.destroy
 		render json: {message: "You have successfully deleted this capstone"}
 	end
