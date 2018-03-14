@@ -3,11 +3,17 @@ class Student < ApplicationRecord
 	has_many :educations
 	has_many :experiences
 	has_many :skills
+	has_secure_password 
 
+  def full_name 
+  	first_name + " " + last_name
+
+  end
 	
   def as_json
     {
       id: id,
+      fullName: full_name,
       firstName: first_name,
       lastName: last_name,
       email: email,
