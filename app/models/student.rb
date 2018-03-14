@@ -19,7 +19,10 @@ class Student < ApplicationRecord
       resumeUrl: resume_url,
       githubUrl: github_url,
       photo: photo,
-      education: educations.as_json
+      educations: educations.as_json,
+      skills: skills.as_json,
+      experiences: experiences.as_json,
+      capstones:  capstones.as_json
     }
   end
 end
