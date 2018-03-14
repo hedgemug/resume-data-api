@@ -22,6 +22,7 @@ class V1::ExperiencesController < ApplicationController
 			render json: experience.as_json
 		else
 			render json: {errors: "There was an error when creating your experience"}
+		end
 	end
 
 	def update
