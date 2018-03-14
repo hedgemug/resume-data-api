@@ -7,10 +7,10 @@ class Student < ApplicationRecord
 	
   def as_json
     {
+      id: id,
       firstName: first_name,
       lastName: last_name,
       email: email,
-      password: password_digest,
       phoneNumber: phone_number,
       bio: bio,
       linkedinUrl: linkedin_url,
