@@ -3,6 +3,7 @@ class Experience < ApplicationRecord
 
 	def as_json 
 	{
+		id: id,
 		startDate: start_date,
 		endDate: end_date,
 		title: title,
