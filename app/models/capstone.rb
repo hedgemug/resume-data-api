@@ -3,6 +3,7 @@ class Capstone < ApplicationRecord
 
 	def as_json
 		{
+			id: id,
 			title: title,
 			description: description,
 			url: url,

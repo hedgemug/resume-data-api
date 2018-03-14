@@ -3,6 +3,7 @@ class Education < ApplicationRecord
 
   def as_json
     {
+      id: id,
       startDate: start_date,
       endDate: end_date,
       degree: degree,

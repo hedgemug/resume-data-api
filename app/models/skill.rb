@@ -3,6 +3,7 @@ class Skill < ApplicationRecord
 
   def as_json
     {
+    id: id,
     skillName: skill_name,
     studentID: student_id
     }
